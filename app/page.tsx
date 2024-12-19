@@ -34,23 +34,23 @@ const PROJECTS = [
 
 const WORK_EXPERIENCE = [
   {
-    company: "Company Name",
-    title: "Senior Design Engineer",
-    start: "2020",
+    company: "Reglazed Studio",
+    title: "CEO",
+    start: "2024",
     end: "Present",
     link: "https://ibelick.com",
   },
   {
-    company: "Company Name",
-    title: "Senior Design Engineer",
-    start: "2020",
-    end: "Present",
+    company: "Freelance",
+    title: "Design Engineer",
+    start: "2022",
+    end: "2024",
     link: "https://ibelick.com",
   },
   {
-    company: "Company Name",
-    title: "Senior Design Engineer",
-    start: "2020",
+    company: "Freelance",
+    title: "Front-end Developer",
+    start: "2017",
     end: "Present",
     link: "https://ibelick.com",
   },
@@ -58,23 +58,23 @@ const WORK_EXPERIENCE = [
 
 const BLOG_POSTS = [
   {
-    title: "How LLMs are changing the way we design",
-    description: "Navigating the new frontier of design with AI",
-    link: "https://www.google.com",
+    title: "Exploring the Intersection of Design, AI, and Design Engineering",
+    description: "How AI is changing the way we design",
+    link: "/blog/exploring-the-intersection-of-design-ai-and-design-engineering",
     uid: "blog-1",
   },
   {
     title: "Why I left my job to start my own company",
     description:
       "A deep dive into my decision to leave my job and start my own company",
-    link: "https://www.google.com",
+    link: "/blog/exploring-the-intersection-of-design-ai-and-design-engineering",
     uid: "blog-2",
   },
   {
     title: "What I learned from my first year of freelancing",
     description:
       "A look back at my first year of freelancing and what I learned",
-    link: "https://www.google.com",
+    link: "/blog/exploring-the-intersection-of-design-ai-and-design-engineering",
     uid: "blog-3",
   },
 ];
@@ -302,7 +302,7 @@ export default function Personal() {
               <Link
                 key={post.uid}
                 className="-mx-3 rounded-xl px-3 py-2"
-                href={`/${post.uid}`}
+                href={post.link}
                 data-id={post.uid}
               >
                 <div className="flex flex-col space-y-1">

@@ -6,13 +6,8 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
-  },
-  plugins: [],
+  // darkMode: ["variant", "&:not(.light *)"],
+  // darkMode: ["selector", '[data-mode="dark"]'],
+  darkMode: "class",
+  plugins: [require("@tailwindcss/typography")],
 } satisfies Config;

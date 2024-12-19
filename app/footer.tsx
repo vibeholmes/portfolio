@@ -35,6 +35,8 @@ function ThemeSwitch() {
     return null;
   }
 
+  console.log("theme", theme);
+
   return (
     <AnimatedBackground
       className="pointer-events-none rounded-lg bg-zinc-100 dark:bg-zinc-800"
