@@ -236,7 +236,14 @@ export default function Personal() {
                 <ProjectVideo src={project.video} />
               </div>
               <div className="px-1">
-                <h4 className="font-base dark:text-zinc-100">{project.name}</h4>
+                <a
+                  className="group font-base text-zinc-900 inline-block relative group"
+                  href={project.link}
+                  target="_blank"
+                >
+                  {project.name}
+                  <span className="block absolute left-0 bottom-0.5 max-w-0 group-hover:max-w-full w-full transition-all duration-200 h-[1px] bg-zinc-900"></span>
+                </a>
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
                 </p>
