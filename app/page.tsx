@@ -237,7 +237,7 @@ export default function Personal() {
               </div>
               <div className="px-1">
                 <a
-                  className="group font-base text-zinc-900 inline-block relative group"
+                  className="group font-base text-zinc-900 inline-block relative group font-[450] dark:text-zinc-50"
                   href={project.link}
                   target="_blank"
                 >
@@ -267,7 +267,7 @@ export default function Personal() {
               rel="noopener noreferrer"
             >
               <Spotlight
-                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-3xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-300"
+                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
                 size={64}
               />
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
@@ -295,10 +295,10 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-0">
           <AnimatedBackground
             enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900"
+            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
             transition={{
               type: "spring",
               bounce: 0,
@@ -308,7 +308,7 @@ export default function Personal() {
             {BLOG_POSTS.map((post) => (
               <Link
                 key={post.uid}
-                className="-mx-3 rounded-xl px-3 py-2"
+                className="-mx-3 rounded-xl px-3 py-3"
                 href={post.link}
                 data-id={post.uid}
               >
