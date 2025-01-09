@@ -144,7 +144,6 @@ function ProjectVideo({ src }: ProjectVideoProps) {
           muted
           className="aspect-video w-full cursor-zoom-in rounded-xl"
         />
-        <div className="absolute inset-0 hidden rounded-xl bg-zinc-950/20 dark:block" />
       </MorphingDialogTrigger>
       <MorphingDialogContainer>
         <MorphingDialogContent className="relative rounded-2xl bg-zinc-50 p-1 ring-1 ring-inset ring-zinc-200/50 dark:bg-zinc-950 dark:ring-zinc-800/50">
