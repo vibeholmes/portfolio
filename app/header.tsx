@@ -1,12 +1,12 @@
-"use client";
-import { TextEffect } from "@/components/motion-ui/text-effect";
-import Link from "next/link";
+'use client'
+import { TextEffect } from '@/components/ui/text-effect'
+import Link from 'next/link'
 
 export function Header() {
   return (
     <header className="mb-8 flex items-center justify-between">
       <div>
-        <Link href="/" className="text-black dark:text-white font-medium">
+        <Link href="/" className="font-medium text-black dark:text-white">
           Julien Thibeaut
         </Link>
         <TextEffect
@@ -20,5 +20,5 @@ export function Header() {
         </TextEffect>
       </div>
     </header>
-  );
+  )
 }

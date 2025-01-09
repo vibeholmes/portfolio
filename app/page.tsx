@@ -1,108 +1,108 @@
-"use client";
-import { motion } from "motion/react";
-import { XIcon } from "lucide-react";
-import { Spotlight } from "@/components/motion-ui/spotlight";
-import { Magnetic } from "@/components/motion-ui/magnetic";
+'use client'
+import { motion } from 'motion/react'
+import { XIcon } from 'lucide-react'
+import { Spotlight } from '@/components/ui/spotlight'
+import { Magnetic } from '@/components/ui/magnetic'
 import {
   MorphingDialog,
   MorphingDialogTrigger,
   MorphingDialogContent,
   MorphingDialogClose,
   MorphingDialogContainer,
-} from "@/components/motion-ui/morphing-dialog";
-import Link from "next/link";
-import { AnimatedBackground } from "@/components/motion-ui/animated-background";
+} from '@/components/ui/morphing-dialog'
+import Link from 'next/link'
+import { AnimatedBackground } from '@/components/ui/animated-background'
 
 const PROJECTS = [
   {
-    name: "Motion Primitives Pro",
+    name: 'Motion Primitives Pro',
     description:
-      "Advanced components and templates to craft beautiful websites.",
-    link: "https://pro.motion-primitives.com/",
+      'Advanced components and templates to craft beautiful websites.',
+    link: 'https://pro.motion-primitives.com/',
     video:
-      "https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0",
-    id: "project1",
+      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+    id: 'project1',
   },
   {
-    name: "Motion Primitives",
-    description: "UI kit to make beautiful, animated interfaces.",
-    link: "https://motion-primitives.com/",
+    name: 'Motion Primitives',
+    description: 'UI kit to make beautiful, animated interfaces.',
+    link: 'https://motion-primitives.com/',
     video:
-      "https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0",
-    id: "project2",
+      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    id: 'project2',
   },
-];
+]
 
 const WORK_EXPERIENCE = [
   {
-    company: "Reglazed Studio",
-    title: "CEO",
-    start: "2024",
-    end: "Present",
-    link: "https://ibelick.com",
-    id: "work1",
+    company: 'Reglazed Studio',
+    title: 'CEO',
+    start: '2024',
+    end: 'Present',
+    link: 'https://ibelick.com',
+    id: 'work1',
   },
   {
-    company: "Freelance",
-    title: "Design Engineer",
-    start: "2022",
-    end: "2024",
-    link: "https://ibelick.com",
-    id: "work2",
+    company: 'Freelance',
+    title: 'Design Engineer',
+    start: '2022',
+    end: '2024',
+    link: 'https://ibelick.com',
+    id: 'work2',
   },
   {
-    company: "Freelance",
-    title: "Front-end Developer",
-    start: "2017",
-    end: "Present",
-    link: "https://ibelick.com",
-    id: "work3",
+    company: 'Freelance',
+    title: 'Front-end Developer',
+    start: '2017',
+    end: 'Present',
+    link: 'https://ibelick.com',
+    id: 'work3',
   },
-];
+]
 
 const BLOG_POSTS = [
   {
-    title: "Exploring the Intersection of Design, AI, and Design Engineering",
-    description: "How AI is changing the way we design",
-    link: "/blog/exploring-the-intersection-of-design-ai-and-design-engineering",
-    uid: "blog-1",
+    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
+    description: 'How AI is changing the way we design',
+    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    uid: 'blog-1',
   },
   {
-    title: "Why I left my job to start my own company",
+    title: 'Why I left my job to start my own company',
     description:
-      "A deep dive into my decision to leave my job and start my own company",
-    link: "/blog/exploring-the-intersection-of-design-ai-and-design-engineering",
-    uid: "blog-2",
+      'A deep dive into my decision to leave my job and start my own company',
+    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    uid: 'blog-2',
   },
   {
-    title: "What I learned from my first year of freelancing",
+    title: 'What I learned from my first year of freelancing',
     description:
-      "A look back at my first year of freelancing and what I learned",
-    link: "/blog/exploring-the-intersection-of-design-ai-and-design-engineering",
-    uid: "blog-3",
+      'A look back at my first year of freelancing and what I learned',
+    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    uid: 'blog-3',
   },
-];
+]
 
 const SOCIAL_LINKS = [
   {
-    label: "Github",
-    link: "https://github.com/ibelick",
+    label: 'Github',
+    link: 'https://github.com/ibelick',
   },
   {
-    label: "Twitter",
-    link: "https://twitter.com/ibelick",
+    label: 'Twitter',
+    link: 'https://twitter.com/ibelick',
   },
   {
-    label: "LinkedIn",
-    link: "https://www.linkedin.com/in/ibelick",
+    label: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/ibelick',
   },
   {
-    label: "Instagram",
-    link: "https://www.instagram.com/ibelick",
+    label: 'Instagram',
+    link: 'https://www.instagram.com/ibelick',
   },
-];
+]
 
-const EMAIL = "your@email.com";
+const EMAIL = 'your@email.com'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -112,26 +112,26 @@ const VARIANTS_CONTAINER = {
       staggerChildren: 0.15,
     },
   },
-};
+}
 
 const VARIANTS_SECTION = {
-  hidden: { opacity: 0, y: 20, filter: "blur(8px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-};
+  hidden: { opacity: 0, y: 20, filter: 'blur(8px)' },
+  visible: { opacity: 1, y: 0, filter: 'blur(0px)' },
+}
 
 const TRANSITION_SECTION = {
   duration: 0.3,
-};
+}
 
 type ProjectVideoProps = {
-  src: string;
-};
+  src: string
+}
 
 function ProjectVideo({ src }: ProjectVideoProps) {
   return (
     <MorphingDialog
       transition={{
-        type: "spring",
+        type: 'spring',
         bounce: 0,
         duration: 0.3,
       }}
@@ -171,15 +171,15 @@ function ProjectVideo({ src }: ProjectVideoProps) {
         </MorphingDialogClose>
       </MorphingDialogContainer>
     </MorphingDialog>
-  );
+  )
 }
 
 function MagneticSocialLink({
   children,
   link,
 }: {
-  children: React.ReactNode;
-  link: string;
+  children: React.ReactNode
+  link: string
 }) {
   return (
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
@@ -205,7 +205,7 @@ function MagneticSocialLink({
         </svg>
       </a>
     </Magnetic>
-  );
+  )
 }
 
 export default function Personal() {
@@ -241,12 +241,12 @@ export default function Personal() {
               </div>
               <div className="px-1">
                 <a
-                  className="group font-base text-zinc-900 inline-block relative group font-[450] dark:text-zinc-50"
+                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
                   href={project.link}
                   target="_blank"
                 >
                   {project.name}
-                  <span className="block absolute left-0 bottom-0.5 max-w-0 group-hover:max-w-full w-full transition-all duration-200 h-[1px] bg-zinc-900"></span>
+                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
                 </a>
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
@@ -305,7 +305,7 @@ export default function Personal() {
             enableHover
             className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
             transition={{
-              type: "spring",
+              type: 'spring',
               bounce: 0,
               duration: 0.2,
             }}
@@ -337,7 +337,7 @@ export default function Personal() {
       >
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Feel free to contact me at{" "}
+          Feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
             {EMAIL}
           </a>
@@ -351,5 +351,5 @@ export default function Personal() {
         </div>
       </motion.section>
     </motion.main>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import type { MDXComponents } from "mdx/types";
+import type { MDXComponents } from 'mdx/types'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -8,16 +8,16 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       alt,
       caption,
     }: {
-      src: string;
-      alt: string;
-      caption: string;
+      src: string
+      alt: string
+      caption: string
     }) => {
       return (
         <figure>
           <img src={src} alt={alt} className="rounded-xl" />
           <figcaption className="text-center">{caption}</figcaption>
         </figure>
-      );
+      )
     },
-  };
+  }
 }
