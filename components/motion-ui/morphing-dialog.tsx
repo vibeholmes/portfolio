@@ -125,6 +125,7 @@ function MorphingDialogTrigger({
       aria-haspopup="dialog"
       aria-expanded={isOpen}
       aria-controls={`motion-ui-morphing-dialog-content-${uniqueId}`}
+      aria-label={`Open dialog ${uniqueId}`}
     >
       {children}
     </motion.div>

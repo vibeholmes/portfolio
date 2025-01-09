@@ -16,7 +16,8 @@ import { AnimatedBackground } from "@/components/motion-ui/animated-background";
 const PROJECTS = [
   {
     name: "Motion Primitives Pro",
-    description: "A collection of motion primitives for React.",
+    description:
+      "Advanced components and templates to craft beautiful websites.",
     link: "https://pro.motion-primitives.com/",
     video:
       "https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0",
@@ -24,7 +25,7 @@ const PROJECTS = [
   },
   {
     name: "Motion Primitives",
-    description: "A collection of motion primitives for React.",
+    description: "UI kit to make beautiful, animated interfaces.",
     link: "https://motion-primitives.com/",
     video:
       "https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0",
@@ -39,6 +40,7 @@ const WORK_EXPERIENCE = [
     start: "2024",
     end: "Present",
     link: "https://ibelick.com",
+    id: "work1",
   },
   {
     company: "Freelance",
@@ -46,6 +48,7 @@ const WORK_EXPERIENCE = [
     start: "2022",
     end: "2024",
     link: "https://ibelick.com",
+    id: "work2",
   },
   {
     company: "Freelance",
@@ -53,6 +56,7 @@ const WORK_EXPERIENCE = [
     start: "2017",
     end: "Present",
     link: "https://ibelick.com",
+    id: "work3",
   },
 ];
 
@@ -98,12 +102,14 @@ const SOCIAL_LINKS = [
   },
 ];
 
+const EMAIL = "your@email.com";
+
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -116,8 +122,6 @@ const VARIANTS_SECTION = {
 const TRANSITION_SECTION = {
   duration: 0.3,
 };
-
-const EMAIL = "your@email.com";
 
 type ProjectVideoProps = {
   src: string;
@@ -195,8 +199,8 @@ function MagneticSocialLink({
           <path
             d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
             fill="currentColor"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
           ></path>
         </svg>
       </a>
@@ -229,7 +233,7 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
-        <div className="flex flex-col space-y-12">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-inset ring-zinc-200/50 dark:bg-zinc-950/40 dark:ring-zinc-800/50">
@@ -265,6 +269,7 @@ export default function Personal() {
               href={job.link}
               target="_blank"
               rel="noopener noreferrer"
+              key={job.id}
             >
               <Spotlight
                 className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
