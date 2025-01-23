@@ -4,7 +4,7 @@ import { motion, SpringOptions, useScroll, useSpring } from 'motion/react'
 import { cn } from '@/lib/utils'
 import { RefObject } from 'react'
 
-interface ScrollProgressProps {
+export type ScrollProgressProps = {
   className?: string
   springOptions?: SpringOptions
   containerRef?: RefObject<HTMLDivElement>
@@ -23,11 +23,12 @@ export function ScrollProgress({
 }: ScrollProgressProps) {
   const { scrollYProgress } = useScroll({
     container: containerRef,
-    layoutEffect: containerRef?.current !== null,
+    layoutEffect: Boolean(containerRef?.current),
   })
 
   const scaleX = useSpring(scrollYProgress, {
-    ...(springOptions ?? DEFAULT_SPRING_OPTIONS),
+    ...DEFAULT_SPRING_OPTIONS,
+    ...(springOptions ?? {}),
   })
 
   return (

@@ -21,7 +21,7 @@ import { cn } from '@/lib/utils'
 import { XIcon } from 'lucide-react'
 import useClickOutside from '@/hooks/useClickOutside'
 
-interface MorphingDialogContextType {
+export type MorphingDialogContextType = {
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
   uniqueId: string
@@ -41,7 +41,7 @@ function useMorphingDialog() {
   return context
 }
 
-type MorphingDialogProviderProps = {
+export type MorphingDialogProviderProps = {
   children: React.ReactNode
   transition?: Transition
 }
@@ -71,7 +71,7 @@ function MorphingDialogProvider({
   )
 }
 
-type MorphingDialogProps = {
+export type MorphingDialogProps = {
   children: React.ReactNode
   transition?: Transition
 }
@@ -84,7 +84,7 @@ function MorphingDialog({ children, transition }: MorphingDialogProps) {
   )
 }
 
-type MorphingDialogTriggerProps = {
+export type MorphingDialogTriggerProps = {
   children: React.ReactNode
   className?: string
   style?: React.CSSProperties
@@ -132,7 +132,7 @@ function MorphingDialogTrigger({
   )
 }
 
-type MorphingDialogContent = {
+export type MorphingDialogContentProps = {
   children: React.ReactNode
   className?: string
   style?: React.CSSProperties
@@ -142,7 +142,7 @@ function MorphingDialogContent({
   children,
   className,
   style,
-}: MorphingDialogContent) {
+}: MorphingDialogContentProps) {
   const { setIsOpen, isOpen, uniqueId, triggerRef } = useMorphingDialog()
   const containerRef = useRef<HTMLDivElement>(null!)
   const [firstFocusableElement, setFirstFocusableElement] =
@@ -220,7 +220,7 @@ function MorphingDialogContent({
   )
 }
 
-type MorphingDialogContainerProps = {
+export type MorphingDialogContainerProps = {
   children: React.ReactNode
   className?: string
   style?: React.CSSProperties
@@ -258,7 +258,7 @@ function MorphingDialogContainer({ children }: MorphingDialogContainerProps) {
   )
 }
 
-type MorphingDialogTitleProps = {
+export type MorphingDialogTitleProps = {
   children: React.ReactNode
   className?: string
   style?: React.CSSProperties
@@ -283,7 +283,7 @@ function MorphingDialogTitle({
   )
 }
 
-type MorphingDialogSubtitleProps = {
+export type MorphingDialogSubtitleProps = {
   children: React.ReactNode
   className?: string
   style?: React.CSSProperties
@@ -307,7 +307,7 @@ function MorphingDialogSubtitle({
   )
 }
 
-type MorphingDialogDescriptionProps = {
+export type MorphingDialogDescriptionProps = {
   children: React.ReactNode
   className?: string
   disableLayoutAnimation?: boolean
@@ -346,7 +346,7 @@ function MorphingDialogDescription({
   )
 }
 
-type MorphingDialogImageProps = {
+export type MorphingDialogImageProps = {
   src: string
   alt: string
   className?: string
@@ -372,7 +372,7 @@ function MorphingDialogImage({
   )
 }
 
-type MorphingDialogCloseProps = {
+export type MorphingDialogCloseProps = {
   children?: React.ReactNode
   className?: string
   variants?: {
