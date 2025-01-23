@@ -1,4 +1,4 @@
-Nim is a free and open-source personal website template built with Next.js 15 and React 19. Designed for developers, designers, and founders, it combines minimalism with delightful animated components powered by [Motion-Primitives](https://motion-primitives.com).
+Nim is a free and open-source personal website template built with Next.js 15, React 19, Tailwind CSS v4, and Motion. Designed for developers, designers, and founders, it combines minimalism with delightful animated components powered by [Motion-Primitives](https://motion-primitives.com).
 
 Live demo: [https://nim-fawn.vercel.app](https://nim-fawn.vercel.app)
 
@@ -23,4 +23,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## About
 
-Nim is designed to make personal branding effortless and beautiful. If you enjoy it, consider sharing it or exploring [Motion-Primitives Pro](https://pro.motion-primitives.com/) for more advanced animations and components.
+Nim is designed to make personal branding effortless and beautiful. If you enjoy it, consider sharing it and exploring [Motion-Primitives Pro](https://pro.motion-primitives.com/).
