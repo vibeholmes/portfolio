@@ -146,17 +146,17 @@ function ProjectVideo({ src }: ProjectVideoProps) {
         />
       </MorphingDialogTrigger>
       <MorphingDialogContainer>
-        <MorphingDialogContent className="relative rounded-2xl bg-zinc-50 p-1 ring-1 ring-inset ring-zinc-200/50 dark:bg-zinc-950 dark:ring-zinc-800/50">
+        <MorphingDialogContent className="relative aspect-video rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
           <video
             src={src}
             autoPlay
             loop
             muted
-            className="aspect-video h-[70vh] w-full rounded-xl"
+            className="aspect-video h-[50vh] w-full rounded-xl md:h-[70vh]"
           />
         </MorphingDialogContent>
         <MorphingDialogClose
-          className="fixed right-6 top-6 h-fit w-fit rounded-full bg-white p-1"
+          className="fixed top-6 right-6 h-fit w-fit rounded-full bg-white p-1"
           variants={{
             initial: { opacity: 0 },
             animate: {
@@ -235,7 +235,7 @@ export default function Personal() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-inset ring-zinc-200/50 dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                 <ProjectVideo src={project.video} />
               </div>
               <div className="px-1">
