@@ -14,6 +14,8 @@ Live demo: [https://nim-fawn.vercel.app](https://nim-fawn.vercel.app)
 
 ## Getting Started
 
+For detailed setup instructions, refer to the [Installation Guide](./INSTALLATION.md).
+
 ```bash
 git clone https://github.com/ibelick/nim.git
 cd nim
@@ -22,6 +24,10 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests to improve Nim.
 
 ## About
 
