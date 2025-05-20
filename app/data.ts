@@ -95,6 +95,12 @@ export const BLOG_POSTS: BlogPost[] = [
     link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
     uid: 'blog-3',
   },
+  {
+    title: 'How to Export Metadata from MDX for Next.js SEO',
+    description: 'A guide on exporting metadata from MDX files to leverage Next.js SEO features.',
+    link: '/blog/example-mdx-metadata',
+    uid: 'blog-4',
+  },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
