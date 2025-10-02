@@ -10,10 +10,9 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-slate-900 pt-20">
-      <h2 className="flex justify-center text-lg font-medium">Contact Brennan</h2>
+    <div>
       <form
-        className="mx-auto grid max-w-3xl gap-y-6 rounded-lg px-4 py-16 sm:px-6 lg:px-8"
+        className="mx-auto grid max-w-2xl gap-y-6 rounded-lg px-0 py-8 sm:px-4 lg:px-12"
         onSubmit={handleSubmit}
       >
         <div className="flex flex-col gap-y-1.5">
@@ -24,7 +23,7 @@ export default function ContactForm() {
             Name
           </label>
           <input
-            className="h-10 appearance-none rounded-md border-0 px-3 text-[--color-text-input] ring-1 ring-[--color-border-default] outline-none ring-inset placeholder:text-[--color-text-muted] focus-visible:ring-[1.5px] focus-visible:ring-[--color-border-active] focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-[--color-highlight] focus-visible:ring-inset"
+            className="h-10 appearance-none rounded-md border-1 px-3 text-[--color-text-input] ring-1 ring-[--color-border-default] outline-none ring-inset placeholder:text-[--color-text-muted] focus-visible:ring-[1.5px] focus-visible:ring-[--color-border-active] focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-[--color-highlight] focus-visible:ring-inset"
             id="name"
             name="name"
           />
@@ -37,7 +36,7 @@ export default function ContactForm() {
             Email
           </label>
           <input
-            className="h-10 appearance-none rounded-md border-0 px-3 text-[--color-text-input] ring-1 ring-[--color-border-default] outline-none ring-inset placeholder:text-[--color-text-muted] focus-visible:ring-[1.5px] focus-visible:ring-[--color-border-active] focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-[--color-highlight] focus-visible:ring-inset"
+            className="h-10 appearance-none rounded-md border-1 px-3 text-[--color-text-input] ring-1 ring-[--color-border-default] outline-none ring-inset placeholder:text-[--color-text-muted] focus-visible:ring-[1.5px] focus-visible:ring-[--color-border-active] focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-[--color-highlight] focus-visible:ring-inset"
             id="email"
             name="email"
             required
@@ -57,9 +56,10 @@ export default function ContactForm() {
             Message
           </label>
           <textarea
-            className="resize-y appearance-none rounded-md border-0 px-3 py-2 text-[--color-text-input] ring-1 ring-[--color-border-default] outline-none ring-inset placeholder:text-[--color-text-muted] focus-visible:ring-[1.5px] focus-visible:ring-[--color-border-active] focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-[--color-highlight] focus-visible:ring-inset"
+            className="resize-y appearance-none rounded-md border-1 px-3 py-2 text-[--color-text-input] ring-1 ring-[--color-border-default] outline-none ring-inset placeholder:text-[--color-text-muted] focus-visible:ring-[1.5px] focus-visible:ring-[--color-border-active] focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-[--color-highlight] focus-visible:ring-inset"
             id="message"
             name="message"
+            rows={5}
           />
           <ValidationError
             field="message"
@@ -73,7 +73,7 @@ export default function ContactForm() {
         </div>
         <div className="flex flex-row-reverse gap-x-6">
           <button
-            className="cursor-pointer rounded-md bg-[--color-primary] px-8 py-4 text-sm leading-4 font-medium text-white transition-colors duration-200 hover:bg-[--color-primary-active] focus-visible:bg-[--color-primary-active] focus-visible:outline focus-visible:outline-[--color-highlight]"
+            className="cursor-pointer rounded-md border-1 bg-[--color-primary] px-8 py-4 text-sm leading-4 font-medium transition-colors duration-200 hover:bg-[--color-primary-active] focus-visible:bg-[--color-primary-active] focus-visible:outline focus-visible:outline-[--color-highlight] dark:bg-[--color-background]"
             type="submit"
           >
             Send

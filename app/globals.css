@@ -46,14 +46,10 @@
     --color-text-muted: #64748b;
     --color-text-input: #0f172a;
     --color-text-warning: #f97316;
-
-    --font-family-body: 'Work Sans', system-ui, sans-serif;
-    --font-family-display: 'Inter', system-ui, sans-serif;
   }
 
   body {
     -webkit-font-smoothing: antialiased;
-    font-family: var(--font-family-body);
     font-optical-sizing: auto;
     font-style: normal;
   }
