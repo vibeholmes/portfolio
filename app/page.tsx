@@ -20,6 +20,7 @@ import {
   SOCIAL_LINKS,
 } from './data'
 import Image from 'next/image'
+import ContactForm from '@/components/ui/contact-us'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -137,7 +138,12 @@ export default function Personal() {
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                 {project.video && <ProjectVideo src={project.video} />}
                 {project.image && (
-                  <Image src={project.image} width={292} height={200} alt={project.name} />
+                  <Image
+                    src={project.image}
+                    width={292}
+                    height={200}
+                    alt={project.name}
+                  />
                 )}
               </div>
               <div className="px-1">
@@ -233,6 +239,7 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
+        <ContactForm />
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
