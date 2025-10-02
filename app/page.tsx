@@ -19,15 +19,11 @@ import {
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
+import Image from 'next/image'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
 }
 
 const VARIANTS_SECTION = {
@@ -35,23 +31,13 @@ const VARIANTS_SECTION = {
   visible: { opacity: 1, y: 0, filter: 'blur(0px)' },
 }
 
-const TRANSITION_SECTION = {
-  duration: 0.3,
-}
+const TRANSITION_SECTION = { duration: 0.3 }
 
-type ProjectVideoProps = {
-  src: string
-}
+type ProjectVideoProps = { src: string }
 
 function ProjectVideo({ src }: ProjectVideoProps) {
   return (
-    <MorphingDialog
-      transition={{
-        type: 'spring',
-        bounce: 0,
-        duration: 0.3,
-      }}
-    >
+    <MorphingDialog transition={{ type: 'spring', bounce: 0, duration: 0.3 }}>
       <MorphingDialogTrigger>
         <video
           src={src}
@@ -75,10 +61,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
           className="fixed top-6 right-6 h-fit w-fit rounded-full bg-white p-1"
           variants={{
             initial: { opacity: 0 },
-            animate: {
-              opacity: 1,
-              transition: { delay: 0.3, duration: 0.1 },
-            },
+            animate: { opacity: 1, transition: { delay: 0.3, duration: 0.1 } },
             exit: { opacity: 0, transition: { duration: 0 } },
           }}
         >
@@ -137,8 +120,8 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            Crafting scalable, user-centric software solutions. Bridging
+            engineering excellence with real-world impact.
           </p>
         </div>
       </motion.section>
@@ -152,7 +135,10 @@ export default function Personal() {
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
+                {project.video && <ProjectVideo src={project.video} />}
+                {project.image && (
+                  <Image src={project.image} width={292} height={200} alt={project.name} />
+                )}
               </div>
               <div className="px-1">
                 <a
@@ -161,7 +147,7 @@ export default function Personal() {
                   target="_blank"
                 >
                   {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
+                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full dark:bg-zinc-50"></span>
                 </a>
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
@@ -219,11 +205,7 @@ export default function Personal() {
           <AnimatedBackground
             enableHover
             className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-            transition={{
-              type: 'spring',
-              bounce: 0,
-              duration: 0.2,
-            }}
+            transition={{ type: 'spring', bounce: 0, duration: 0.2 }}
           >
             {BLOG_POSTS.map((post) => (
               <Link

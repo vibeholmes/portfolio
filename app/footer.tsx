@@ -6,21 +6,9 @@ import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 const THEMES_OPTIONS = [
-  {
-    label: 'Light',
-    id: 'light',
-    icon: <SunIcon className="h-4 w-4" />,
-  },
-  {
-    label: 'Dark',
-    id: 'dark',
-    icon: <MoonIcon className="h-4 w-4" />,
-  },
-  {
-    label: 'System',
-    id: 'system',
-    icon: <MonitorIcon className="h-4 w-4" />,
-  },
+  { label: 'Light', id: 'light', icon: <SunIcon className="h-4 w-4" /> },
+  { label: 'Dark', id: 'dark', icon: <MoonIcon className="h-4 w-4" /> },
+  { label: 'System', id: 'system', icon: <MonitorIcon className="h-4 w-4" /> },
 ]
 
 function ThemeSwitch() {
@@ -39,11 +27,7 @@ function ThemeSwitch() {
     <AnimatedBackground
       className="pointer-events-none rounded-lg bg-zinc-100 dark:bg-zinc-800"
       defaultValue={theme}
-      transition={{
-        type: 'spring',
-        bounce: 0,
-        duration: 0.2,
-      }}
+      transition={{ type: 'spring', bounce: 0, duration: 0.2 }}
       enableHover={false}
       onValueChange={(id) => {
         setTheme(id as string)
@@ -72,8 +56,8 @@ export function Footer() {
       <div className="flex items-center justify-between">
         <a href="https://github.com/ibelick/nim" target="_blank">
           <TextLoop className="text-xs text-zinc-500">
-            <span>© 2024 Nim.</span>
-            <span>Built with Motion-Primitives.</span>
+            <span>© 2025 Brennan Holmes.</span>
+            <span>Built with Next.js & Tailwind.</span>
           </TextLoop>
         </a>
         <div className="text-xs text-zinc-400">

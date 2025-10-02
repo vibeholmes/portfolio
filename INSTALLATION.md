@@ -1,4 +1,4 @@
-# Nim - Installation Guide
+# Installation Guide
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/ibelick/nim.git
+   git clone git@github.com:vibeholmes/portfolio.git
    cd nim
    ```
 
