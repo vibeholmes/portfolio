@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react'
 
+// Code: https://cursify.vercel.app/components/smooth-follower
+
 export default function SmoothFollower() {
   const mousePosition = useRef({ x: 0, y: 0 })
 
