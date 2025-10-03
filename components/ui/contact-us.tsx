@@ -1,13 +1,23 @@
+'use client'
 import { PUBLIC_ENVS } from '@/lib/env'
 import { useForm, ValidationError } from '@formspree/react'
+import { useEffect } from 'react'
 import toast from 'react-hot-toast'
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm(PUBLIC_ENVS.NEXT_PUBLIC_FORMSPREE_KEY)
 
-  if (state.succeeded) {
-    toast.success('Thanks for contacting us!')
-  }
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success('Thanks for contacting us!')
+    }
+  }, [state.succeeded])
+
+  useEffect(() => {
+    if (state.submitting) {
+      toast.loading('Submitting ...')
+    }
+  }, [state.submitting])
 
   return (
     <div>
@@ -73,10 +83,15 @@ export default function ContactForm() {
         </div>
         <div className="flex flex-row-reverse gap-x-6">
           <button
-            className="cursor-pointer rounded-md border-1 bg-[--color-primary] px-8 py-4 text-sm leading-4 font-medium transition-colors duration-200 hover:bg-[--color-primary-active] focus-visible:bg-[--color-primary-active] focus-visible:outline focus-visible:outline-[--color-highlight] dark:bg-[--color-background]"
+            className="flex cursor-pointer items-center justify-between gap-2 rounded-md border-1 bg-[--color-primary] px-6 py-3 text-sm leading-4 font-medium transition-colors duration-200 hover:bg-[--color-primary-active] focus-visible:bg-[--color-primary-active] focus-visible:outline focus-visible:outline-[--color-highlight] dark:bg-[--color-background]"
             type="submit"
           >
             Send
+            {state.submitting && (
+              <div className="flex items-center justify-center">
+                <div className="mt-[1px] h-3 w-3 animate-spin rounded-full border-2 border-black border-t-transparent dark:border-white dark:border-t-transparent"></div>
+              </div>
+            )}
           </button>
         </div>
       </form>
