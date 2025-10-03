@@ -4,7 +4,6 @@ import './globals.css'
 import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
-import SmoothFollower from '@/components/ui/smooth-follower-cursor'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -56,7 +55,6 @@ export default function RootLayout({
               <Header />
               {children}
               <Footer />
-              <SmoothFollower />
             </div>
           </div>
         </ThemeProvider>

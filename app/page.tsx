@@ -21,6 +21,12 @@ import {
 } from './data'
 import Image from 'next/image'
 import ContactForm from '@/components/ui/contact-us'
+import dynamic from 'next/dynamic'
+
+const SmoothFollower = dynamic(
+  () => import('@/components/ui/smooth-follower-cursor'),
+  { ssr: false },
+)
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -115,6 +121,7 @@ export default function Personal() {
       initial="hidden"
       animate="visible"
     >
+      <SmoothFollower />
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
