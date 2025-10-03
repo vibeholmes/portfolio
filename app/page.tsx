@@ -40,29 +40,61 @@ const VARIANTS_SECTION = {
 
 const TRANSITION_SECTION = { duration: 0.3 }
 
-type ProjectVideoProps = { src: string }
+type ProjectVideoProps = {
+  videoSrc?: string
+  imageSrc?: string
+  title?: string
+}
 
-function ProjectVideo({ src }: ProjectVideoProps) {
+function ProjectVideo({ videoSrc, imageSrc, title }: ProjectVideoProps) {
   return (
     <MorphingDialog transition={{ type: 'spring', bounce: 0, duration: 0.3 }}>
       <MorphingDialogTrigger>
-        <video
-          src={src}
-          autoPlay
-          loop
-          muted
-          className="aspect-video w-full cursor-zoom-in rounded-xl"
-        />
-      </MorphingDialogTrigger>
-      <MorphingDialogContainer>
-        <MorphingDialogContent className="relative aspect-video rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
+        {videoSrc && (
           <video
-            src={src}
+            src={videoSrc}
             autoPlay
             loop
             muted
-            className="aspect-video h-[50vh] w-full rounded-xl md:h-[70vh]"
+            className="aspect-video w-full cursor-zoom-in rounded-xl"
           />
+        )}
+        {imageSrc && title && (
+          <div className="h-[200px] md:h-[180px]">
+            <Image
+              src={imageSrc}
+              alt={title}
+              className="rounded-xl border-1 dark:border-black"
+              fill
+              style={{ objectFit: 'cover' }}
+              priority
+            />
+          </div>
+        )}
+      </MorphingDialogTrigger>
+      <MorphingDialogContainer>
+        <MorphingDialogContent className="relative aspect-video rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
+          {videoSrc && (
+            <video
+              src={videoSrc}
+              autoPlay
+              loop
+              muted
+              className="aspect-video h-[50vh] w-full rounded-xl md:h-[70vh]"
+            />
+          )}
+          {imageSrc && title && (
+            <div className="aspect-video h-[50vh] md:h-[70vh]">
+              <Image
+                src={imageSrc}
+                alt={title}
+                className="w-full rounded-2xl border-1 p-1 dark:border-black"
+                fill
+                style={{ objectFit: 'cover' }}
+                priority
+              />
+            </div>
+          )}
         </MorphingDialogContent>
         <MorphingDialogClose
           className="fixed top-6 right-6 h-fit w-fit rounded-full bg-white p-1"
@@ -143,14 +175,9 @@ export default function Personal() {
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                {project.video && <ProjectVideo src={project.video} />}
+                {project.video && <ProjectVideo videoSrc={project.video} />}
                 {project.image && (
-                  <Image
-                    src={project.image}
-                    width={292}
-                    height={200}
-                    alt={project.name}
-                  />
+                  <ProjectVideo imageSrc={project.image} title={project.name} />
                 )}
               </div>
               <div className="px-1">
