@@ -31,7 +31,6 @@ export const PROJECTS: Project[] = [
     description:
       'BGIS is a facilities management and real estate services private company headquartered in Markham, Ontario, Canada, with a staff of over 10,000 globally.',
     link: 'https://www.bgis.com/',
-    // video: 'https://youtu.be/2gg5m3QLutU',
     image: '/projects/bgis.png',
     id: 'project1',
   },
@@ -39,8 +38,7 @@ export const PROJECTS: Project[] = [
     name: 'Helcim',
     description:
       'Helcim is the easy and affordable solution for small and medium businesses accepting credit card payments in-person or online.',
-    link: 'https://motion-primitives.com/',
-    // video: '',
+    link: 'https://www.helcim.com/',
     image: '/projects/helcim.png',
     id: 'project2',
   },
@@ -58,7 +56,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'BGIS',
     title: 'Software Engineer',
-    start: '2021',
+    start: '2019',
     end: '2023',
     link: 'https://www.bgis.com/',
     id: 'work2',
@@ -66,8 +64,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Helcim',
     title: 'Junior Web Developer',
-    start: '2019',
-    end: '2021',
+    start: '2018',
+    end: '2019',
     link: 'https://www.helcim.com/',
     id: 'work3',
   },
