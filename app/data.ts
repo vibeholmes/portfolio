@@ -16,6 +16,16 @@ type WorkExperience = {
   id: string
 }
 
+type Certificate = {
+  course: string
+  issuer: string
+  description: string
+  link: string
+  image: string
+  video?: string
+  id: string
+}
+
 type BlogPost = {
   title: string
   description: string
@@ -68,6 +78,17 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: '2019',
     link: 'https://www.helcim.com/',
     id: 'work3',
+  },
+]
+
+export const CERTIFICATES: Certificate[] = [
+  {
+    course: 'Machine Learning A-Z',
+    issuer: 'Udemy',
+    description: '',
+    link: 'https://www.udemy.com/certificate/UC-990bd0de-74c5-4268-a80e-fce2996d4aaf/',
+    image: '/certificates/UC-990bd0de-74c5-4268-a80e-fce2996d4aaf.jpg',
+    id: 'certificate1',
   },
 ]
 
