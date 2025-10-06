@@ -90,6 +90,14 @@ export const CERTIFICATES: Certificate[] = [
     image: '/certificates/UC-990bd0de-74c5-4268-a80e-fce2996d4aaf.jpg',
     id: 'certificate1',
   },
+  {
+    course: 'SQL (Advanced) Certificate',
+    issuer: 'HackerRank',
+    description: '',
+    link: 'https://www.hackerrank.com/certificates/d5b4dfbcc787',
+    image: '/certificates/d5b4dfbcc787.png',
+    id: 'certificate2',
+  },
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -110,9 +118,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: 'Github', link: 'https://github.com/vibeholmes' },
-  // { label: 'Twitter', link: 'https://x.com/' },
-  // { label: 'LinkedIn', link: 'https://www.linkedin.com/in/' },
-  // { label: 'Instagram', link: 'https://www.instagram.com/' },
+  { label: 'Twitter', link: 'https://x.com/vibeholmes' },
 ]
 
 export const EMAIL = 'brennanholmesx@gmail.com'

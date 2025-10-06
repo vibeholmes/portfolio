@@ -25,4 +25,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests to improve Nim.
+Contributions are welcome! Feel free to open issues or submit pull requests to improve.
