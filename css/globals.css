@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@custom-variant dark (&:is(.dark *));
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+:root {
+  --sh-class: #7aa2f7;
+  --sh-sign: #89ddff;
+  --sh-string: #9ece6a;
+  --sh-keyword: #bb9af7;
+  --sh-comment: #565f89;
+  --sh-jsxliterals: #7aa2f7;
+  --sh-property: #73daca;
+  --sh-entity: #e0af68;
+}
+
+/* Formspree - Contact us form */
+
+@layer base {
+  :root {
+    --color-background: #cbd5e1;
+    --color-background-alt: #64748b;
+    --color-border-active: #64748b;
+    --color-border-default: #94a3b8;
+    --color-highlight: #cbd5e1;
+    --color-primary: #1e293b;
+    --color-primary-active: #090f1d;
+    --color-text-default: #cbd5e1;
+    --color-text-muted: #64748b;
+    --color-text-input: #0f172a;
+    --color-text-warning: #f97316;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Formspree - Contact us form END */
