@@ -22,7 +22,7 @@ export default function ContactForm() {
   return (
     <div>
       <form
-        className="mx-auto grid max-w-2xl gap-y-6 rounded-lg px-0 py-8 sm:px-4 lg:px-12"
+        className="mx-auto grid max-w-xl gap-y-6 rounded-lg px-0 py-8 sm:px-4 lg:px-12"
         onSubmit={handleSubmit}
       >
         <div className="flex flex-col gap-y-1.5">

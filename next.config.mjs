@@ -4,6 +4,9 @@ import createMDX from '@next/mdx'
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  images: {
+    domains: ['brennanholmes.vercel.app'],
+  },
 }
 
 const withMDX = createMDX({

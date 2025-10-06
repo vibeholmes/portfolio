@@ -67,7 +67,7 @@ function ProjectVideo({ videoSrc, imageSrc, title }: ProjectVideoProps) {
               alt={title}
               className="rounded-xl border-1 dark:border-black"
               fill
-              style={{ objectFit: 'cover' }}
+              sizes="100vw"
               priority
             />
           </div>
@@ -91,7 +91,7 @@ function ProjectVideo({ videoSrc, imageSrc, title }: ProjectVideoProps) {
                 alt={title}
                 className="w-full rounded-2xl border-1 p-1 dark:border-black"
                 fill
-                style={{ objectFit: 'cover' }}
+                sizes="100vw"
                 priority
               />
             </div>
