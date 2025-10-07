@@ -26,27 +26,21 @@ export default function ContactForm() {
         onSubmit={handleSubmit}
       >
         <div className="flex flex-col gap-y-1.5">
-          <label
-            className="block text-sm font-medium text-[--color-text-default]"
-            htmlFor="name"
-          >
+          <label className="block text-sm font-medium" htmlFor="name">
             Name
           </label>
           <input
-            className="h-10 appearance-none rounded-md border-1 px-3 text-[--color-text-input] ring-1 ring-[--color-border-default] outline-none ring-inset placeholder:text-[--color-text-muted] focus-visible:ring-[1.5px] focus-visible:ring-[--color-border-active] focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-[--color-highlight] focus-visible:ring-inset"
+            className="block h-10 w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 dark:bg-white/5 dark:outline-white/10 dark:focus:outline-white"
             id="name"
             name="name"
           />
         </div>
         <div className="flex flex-col gap-y-1.5">
-          <label
-            className="block text-sm font-medium text-[--color-text-default]"
-            htmlFor="email"
-          >
+          <label className="block text-sm font-medium" htmlFor="email">
             Email
           </label>
           <input
-            className="h-10 appearance-none rounded-md border-1 px-3 text-[--color-text-input] ring-1 ring-[--color-border-default] outline-none ring-inset placeholder:text-[--color-text-muted] focus-visible:ring-[1.5px] focus-visible:ring-[--color-border-active] focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-[--color-highlight] focus-visible:ring-inset"
+            className="block h-10 w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 dark:bg-white/5 dark:outline-white/10 dark:focus:outline-white"
             id="email"
             name="email"
             required
@@ -55,18 +49,15 @@ export default function ContactForm() {
             field="email"
             prefix="Email"
             errors={state.errors}
-            className="text-[--color-text-warning]"
+            className="text-sm text-orange-500"
           />
         </div>
         <div className="flex flex-col gap-y-1.5">
-          <label
-            className="block text-sm font-medium text-[--color-text-default]"
-            htmlFor="message"
-          >
+          <label className="block text-sm font-medium" htmlFor="message">
             Message
           </label>
           <textarea
-            className="resize-y appearance-none rounded-md border-1 px-3 py-2 text-[--color-text-input] ring-1 ring-[--color-border-default] outline-none ring-inset placeholder:text-[--color-text-muted] focus-visible:ring-[1.5px] focus-visible:ring-[--color-border-active] focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-[--color-highlight] focus-visible:ring-inset"
+            className="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 dark:bg-white/5 dark:outline-white/10 dark:focus:outline-white"
             id="message"
             name="message"
             rows={5}
@@ -75,7 +66,7 @@ export default function ContactForm() {
             field="message"
             prefix="Message"
             errors={state.errors}
-            className="text-[--color-text-warning]"
+            className="text-sm text-orange-500"
           />
           <p className="block text-sm text-[--color-text-muted]">
             I usually respond within 1-2 business days.
@@ -83,7 +74,7 @@ export default function ContactForm() {
         </div>
         <div className="flex flex-row-reverse gap-x-6">
           <button
-            className="flex cursor-pointer items-center justify-between gap-2 rounded-md border-1 bg-[--color-primary] px-6 py-3 text-sm leading-4 font-medium transition-colors duration-200 hover:bg-[--color-primary-active] focus-visible:bg-[--color-primary-active] focus-visible:outline focus-visible:outline-[--color-highlight] dark:bg-[--color-background]"
+            className="flex cursor-pointer items-center justify-between gap-2 rounded-md border-1 px-6 py-3 text-sm leading-4 font-medium transition-colors duration-200 dark:hover:bg-white/5"
             type="submit"
           >
             Send
