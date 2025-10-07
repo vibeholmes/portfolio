@@ -1,4 +1,5 @@
 'use client'
+import { Flag } from '@/components/ui/flag'
 import { TextEffect } from '@/components/ui/text-effect'
 import Link from 'next/link'
 
@@ -18,6 +19,9 @@ export function Header() {
         >
           Senior Software Engineer
         </TextEffect>
+      </div>
+      <div>
+        <Flag />
       </div>
     </header>
   )
