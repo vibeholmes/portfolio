@@ -13,7 +13,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://brennan-holmes.vercel.app/'),
+  metadataBase: new URL('https://brennanholmes.vercel.app/'),
   alternates: {
     canonical: '/',
   },
