@@ -1,8 +1,1 @@
-blank_issues_enabled: false
-contact_links:
-  - name: "📖 Documentation"
-    url: "https://yourproject.docs"
-    about: "Check the documentation before opening an issue."
-  - name: "💬 Community Discussion"
-    url: "https://github.com/yourorg/yourrepo/discussions"
-    about: "For questions or discussions."
+blank_issues_enabled: true
