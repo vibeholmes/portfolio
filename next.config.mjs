@@ -5,7 +5,13 @@ const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   images: {
-    domains: ['brennanholmes.vercel.app'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'brennanholmes.vercel.app',
+        pathname: '/**',
+      },
+    ],
   },
 }
 
